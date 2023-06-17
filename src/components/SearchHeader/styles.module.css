@@ -1,0 +1,40 @@
+.lupaContent {
+  cursor: pointer;
+  transition: width 0.2s ease;
+  background: var(--blue-700);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  color: var(--white);
+}
+
+.lupaContent input {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  color: var(--white);
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+.lupaContent input:focus {
+  outline: none;
+}
+
+.full {
+  width: 20rem;
+  height: 2rem;
+}
+
+.small {
+  width: 4rem;
+  height: 2rem;
+  font-size: 0;
+}
+
+.lupa {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  margin-left: auto;
+}

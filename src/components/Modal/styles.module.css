@@ -1,0 +1,184 @@
+.backModal {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 480px;
+  background: var(--black-600);
+  border-radius: 10px;
+  padding: 50px 0 50px 60px;
+  display: flex;
+  gap: 30px;
+  box-shadow: 10px 8px 20px 5px rgba(0, 0, 0, 0.659);
+}
+
+.modal img {
+  width: 30%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 70%;
+}
+
+.details h1 {
+  color: var(--white);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.details h2 {
+  font-size: 15px;
+  color: var(--white);
+}
+
+.details img {
+  width: 250px;
+}
+
+.castGenres {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--white);
+}
+
+.rating {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+  margin-top: 10%;
+}
+
+.attend {
+  width: 120px;
+  background: var(--white);
+  color: black;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.attend p {
+  text-align: center;
+}
+
+.streams {
+  display: flex;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.streams div {
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+.streams div a {
+  color: var(--blue-400);
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+
+@media screen and (max-width:300px) {
+  .modal {
+    flex-direction: column;
+    width: 90%;
+    padding: 30px 0 30px 30px;
+    height: 95%;
+  }
+
+  .modal img {
+    width: 230px;
+  }
+
+  .details h1 {
+    font-size: 18px;
+    width: 85%;
+  }
+
+
+  .castGenres {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    color: var(--white);
+    width: 100%;
+  }
+
+  .rating bottom {
+    width: 10px;
+    height: 10px;
+    margin-top: 0;
+    gap: 10px;
+  }
+
+  .attend {
+    width: 75px;
+
+  }
+
+  .attend p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .modal {
+    flex-direction: column;
+    width: 90%;
+    padding: 30px 0 30px 30px;
+    height: 90%;
+  }
+
+  .modal img {
+    width: 230px;
+  }
+
+  .details h1 {
+    font-size: 18px;
+    width: 85%;
+  }
+
+
+  .castGenres {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    color: var(--white);
+    width: 100%;
+  }
+
+  .rating {
+    margin: 0 auto;
+    margin-top: 0;
+    gap: 10px;
+  }
+
+  .attend {
+    width: 75px;
+
+  }
+
+  .attend p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+}

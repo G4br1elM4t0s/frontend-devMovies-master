@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+:root {
+  --white: #ffffff;
+  --white-800: #f6f8ff;
+
+  --blue-400: #016fb9;
+  --blue-700: #016fb97d;
+  --blue-900: #001242;
+
+  --black-600: #191919;
+  --black-900: #000000;
+
+  --font1: 400 40px/1.5 montserrat;
+  --font2: 400 30px/1.5 montserrat;
+  --font3: 600 25px/1.5 montserrat;
+  --font4: 500 20px/1.5 montserrat;
+  --font5: 400 15px/1.5 montserrat;
+
+  --font12: 400 25px/1.5 montserrat;
+  --font32: 600 20px/1.5 montserrat;
+  --font42: 400 15px/1.5 montserrat;
+  --font52: 500 12px "Montserrat";
+}
+
+body {
+  background: var(--black-600);
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem "Montserrat", sans-serif;
+}

@@ -1,0 +1,83 @@
+.filterContent {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 150px;
+  align-items: center;
+}
+
+.container button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.container nav ul li {
+  cursor: pointer;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  background: var(--blue-900);
+  border-radius: 10px;
+  position: absolute;
+  margin-top: 40px;
+}
+
+.active ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.active ul li {
+  color: var(--white);
+}
+
+.inactive {
+  opacity: 0;
+  position: absolute;
+}
+
+.selectedItems {
+  display: flex;
+  gap: 15px;
+}
+
+.filterBox {
+  background: var(--white);
+  padding: 8px;
+  border-radius: 10px;
+  gap: 8px;
+  display: flex;
+}
+
+.removeButton {
+  color: black;
+  font-weight: 700;
+  border: 0;
+}
+
+.selected {
+  text-decoration: line-through;
+}

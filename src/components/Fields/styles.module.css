@@ -1,0 +1,27 @@
+.errorMessage {
+  color: red;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.fieldContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 365px;
+}
+
+.fieldContent label {
+  color: white;
+  font-size: 20px;
+}
+
+.fieldContent input {
+  background: var(--blue-400);
+  border: 0;
+  border-radius: 10px;
+  width: 20rem;
+  height: 2rem;
+  outline: none;
+
+  padding-left: 20px;
+}

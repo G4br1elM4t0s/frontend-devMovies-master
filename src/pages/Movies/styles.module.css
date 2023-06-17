@@ -1,0 +1,78 @@
+.secondyBar {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.mainContent {
+  width: 100%;
+  height: calc(100vh - 10rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardsControll {
+  height: 100%;
+  width: 1120px;
+
+  /* overflow-y: scroll; */
+  padding: 1rem 2rem;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.contentBar {
+  width: 1220px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contentBar div:first-child {
+  margin-left: auto;
+}
+
+
+@media (max-width: 769px) {
+  .cardsControll {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .cardsControll> :last-child {
+    margin-right: 0;
+  }
+}
+
+
+
+
+@media (max-width: 426px) {
+  .cardsControll {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .cardsControll> :last-child {
+    margin-right: 0;
+  }
+}
+
+
+@media (max-width: 321px) {
+  .mainContent {
+    width: 100vw;
+    height: auto;
+  }
+
+  .cardsControll {
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  }
+
+
+
+  .cardsControll> :last-child {
+    margin-right: 0;
+  }
+}

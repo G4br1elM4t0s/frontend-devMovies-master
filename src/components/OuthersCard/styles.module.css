@@ -1,0 +1,81 @@
+.contentCard {
+  display: flex;
+  max-width: 1100px;
+  height: 100px;
+  padding: 20px 45px 0 30px;
+  background: var(--blue-900);
+  align-items: center;
+  gap: 40px;
+  border-radius: 10px;
+  border: none;
+  color: var(--white);
+}
+
+.imgBoxCardOther {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 20%;
+}
+
+.imgBoxCardOther img {
+  height: 100%;
+  width: 130px;
+}
+
+.buttonRating {
+  margin-left: auto;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonRating button {
+  width: 145px;
+  height: 30px;
+  background: var(--white);
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 426px) {
+  .contentCard {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  .imgBoxCardOther {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+  }
+
+
+  .buttonRating button {
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 321px) {
+  .contentCard {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  .imgBoxCardOther {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+  }
+
+
+  .buttonRating button {
+    margin-bottom: 10px;
+    width: 100px;
+  }
+}

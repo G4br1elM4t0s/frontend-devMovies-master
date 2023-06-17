@@ -1,0 +1,264 @@
+:root {
+  --azulclaro: #016fb9;
+  --azulescuro: #001242;
+  --azulescurosessenta: #001242b1;
+  --azulsessenta: #016fb9a3;
+
+  --branco: #f6f8ff;
+  --cinza: #8e8e8e;
+  --brancosessenta: #f6f8ffb1;
+  --background: #191919;
+
+  --radius: 10px;
+  --opacity: 60%;
+
+  --font4: 500 20px/1.5 montserrat;
+}
+
+.mainContent {
+  width: 100%;
+  height: calc(100vh - 10rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.campoGerencia {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 70%;
+  border: none;
+
+  position: relative;
+  color: var(--white);
+}
+
+section {
+  padding-bottom: 20rem;
+}
+
+.campoFilme,
+.campoStreamer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--azulclaro);
+  color: var(--branco);
+  border-radius: 6px;
+  height: 60px;
+
+  font: var(--font4);
+
+  padding: 7px 20px;
+  margin: 20px 0;
+}
+
+.cadastro_midia article {
+  margin: 0;
+  padding: 0;
+}
+
+.campoFilme img,
+.campoStreamer img {
+  width: 16px;
+}
+
+.campoStreamer {
+  margin-top: 3%;
+}
+
+.seta {
+  transform: rotate(0deg);
+  transition: transform 400ms ease-in-out;
+}
+
+.seta.animate {
+  transform: rotate(90deg);
+}
+
+.imgFundo {
+  opacity: 25%;
+  margin-left: 70px;
+  height: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  transition: max-height 1s ease;
+}
+
+form label {
+  color: var(--branco);
+  margin-left: 15px;
+  margin-top: 13px;
+}
+
+.c1,
+.c2,
+.c3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.c1 > div,
+.c2 > div,
+.c3 > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.c2 aside div {
+  display: flex;
+  flex-direction: column;
+}
+
+form .descricao {
+  height: 180px;
+}
+
+form input,
+form select,
+form textarea {
+  all: unset;
+  height: 30px;
+  border-radius: 8px;
+  background-color: var(--azulsessenta);
+  text-indent: 20px;
+  color: var(--branco);
+  padding: 15px 0;
+}
+
+form textarea {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  padding: 10px 20px;
+  text-indent: 0px;
+}
+
+form select {
+  align-items: center;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+  align-self: center;
+}
+
+.preview .selectedImage {
+  z-index: 0;
+  --ph: 215px;
+  --pw: 155px;
+
+  height: var(--ph);
+  width: var(--pw);
+
+  position: relative;
+  border-radius: 10px;
+}
+
+.preview .preview_img {
+  z-index: 1;
+  background-color: var(--azulsessenta);
+
+  --ph: 215px;
+  --pw: 155px;
+
+  height: var(--ph);
+  width: var(--pw);
+
+  position: relative;
+  border-radius: 10px;
+}
+
+.preview input {
+  opacity: 0;
+  height: var(--ph);
+  width: var(--pw);
+
+  position: relative;
+}
+
+.preview .camera {
+  position: absolute;
+  top: 32%;
+  left: 26%;
+}
+
+form button {
+  all: unset;
+  margin: 32px;
+  align-self: center;
+  margin-bottom: 83px;
+}
+
+.campoFilme + form {
+  transition: opacity 1s ease-in;
+}
+
+.btn_secundario {
+  display: flex;
+  justify-content: center;
+  width: 287px;
+  padding: 7px 0 7px 0;
+
+  background-color: var(--branco);
+  color: var(--azulescuro);
+  font: var(--font4);
+
+  border-radius: var(--radius);
+  border: none;
+}
+
+.btn_secundario:hover,
+.btn_secundario:focus {
+  background-color: var(--brancosessenta);
+}
+
+@media (min-width: 700px) {
+  .c1 {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    gap: 20px;
+  }
+
+  .c2 {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 62% 30%;
+  }
+
+  .preview {
+    top: -0.7rem;
+    align-items: flex-end;
+  }
+
+  .preview label {
+    padding-right: 7.5rem;
+  }
+
+  .preview .preview_img {
+    height: calc(var(--ph) + 90px);
+    width: calc(var(--pw) + 30px);
+    align-items: flex-end;
+  }
+
+  .preview .camera {
+    top: 37%;
+    left: 30%;
+  }
+
+  .c3 {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    gap: 20px;
+  }
+}

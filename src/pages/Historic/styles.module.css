@@ -1,0 +1,61 @@
+.mainContent {
+  width: 100%;
+  height: calc(100vh - 10rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.historys {
+  overflow-y: scroll;
+  height: calc(100vh - 10rem);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--black-600);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--black-900);
+  }
+}
+
+.boxContent {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+.positionator {
+  position: fixed;
+  width: 100%;
+  height: 250px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  top: calc(5rem);
+  left: 0;
+}
+
+.onlyCard {
+  position: absolute;
+  width: 1220px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 2rem;
+}
+
+.boxOther {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}

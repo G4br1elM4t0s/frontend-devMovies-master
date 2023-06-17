@@ -1,0 +1,48 @@
+.cardBox {
+  width: 200px;
+  height: 270px;
+  display: flex;
+  border-radius: 10px;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.2s;
+
+  cursor: pointer;
+}
+
+.cardBox h1 {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cardBox:hover {
+  width: 205px;
+  height: 285px;
+  transition: 0.2s;
+
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 769px) {
+  .cardBox {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 426px) {
+  .cardBox {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .cardBox {
+    width: 125px;
+    height: 200px;
+  }
+}

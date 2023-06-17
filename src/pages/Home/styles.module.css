@@ -1,0 +1,98 @@
+.mainContent {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContent div:not(:first-child) {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.capa {
+  display: flex;
+  width: 100%;
+}
+
+.contentExplication {
+  background: var(--blue-700);
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  width: 77vw;
+  gap: 10%;
+  border-radius: 10px;
+}
+
+.contentExplication p {
+  color: var(--white);
+}
+
+.contentExplication img {
+  width: 45%;
+  height: 200px;
+}
+
+.contentSituation {
+  background: var(--blue-700);
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  width: 77vw;
+  align-items: center;
+  gap: 10%;
+  border-radius: 10px;
+}
+
+.contentSituation p {
+  color: var(--white);
+}
+
+.contentSituation img {
+  width: 45%;
+  height: 200px;
+}
+
+.rodape {
+  height: 5rem;
+  display: flex;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: center;
+}
+
+.rodape .btnAjuda {
+  margin-left: auto;
+  height: 3rem;
+}
+
+.leftLogin {
+  position: fixed;
+  top: 10rem;
+  left: 5%;
+  z-index: -1;
+}
+
+.rightLogin {
+  position: fixed;
+  bottom: 5rem;
+  right: 5%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 620px) {
+  .contentExplication,
+  .contentSituation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contentSituation p,
+  .contentExplication p {
+    width: 95%;
+  }
+}

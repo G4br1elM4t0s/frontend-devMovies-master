@@ -1,0 +1,30 @@
+.boxMsg {
+  background-image: url("../../assets/msg.png");
+  background-size: contain;
+  height: 380px;
+  width: 530px;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.boxMsg h1 {
+  color: var(--white-800);
+  font-size: 26px;
+}
+
+.isVisible {
+  display: flex;
+}
+
+.isHidden {
+  display: none;
+}

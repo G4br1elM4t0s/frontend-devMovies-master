@@ -1,0 +1,13 @@
+.rodape {
+  height: 5rem;
+  display: flex;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: center;
+
+  .btnAjuda {
+    margin-left: auto;
+    height: 3rem;
+  }
+}

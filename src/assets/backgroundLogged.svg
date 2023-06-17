@@ -1,0 +1,20 @@
+<svg width="1402" height="552" viewBox="0 0 1402 552" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<ellipse cx="38" cy="36" rx="38" ry="36" transform="matrix(-1 0 0 1 1106 372)" fill="#F6F8FF"/>
+<ellipse cx="38" cy="36" rx="38" ry="36" transform="matrix(-1 0 0 1 1402 109)" fill="#F6F8FF"/>
+<rect x="1067" y="299" width="70" height="248" rx="10" fill="#001242"/>
+<rect x="1169" y="99" width="70" height="448" rx="10" fill="#001242"/>
+<rect x="1291" width="70" height="552" rx="10" fill="#001242"/>
+<rect x="1090" y="299" width="70" height="248" rx="10" fill="#016FB9"/>
+<rect x="1192" y="99" width="70" height="448" rx="10" fill="#016FB9"/>
+<rect x="1314" width="70" height="552" rx="10" fill="#016FB9"/>
+<ellipse cx="342" cy="423" rx="38" ry="36" fill="#F6F8FF"/>
+<ellipse cx="38" cy="146" rx="38" ry="36" fill="#F6F8FF"/>
+<rect width="70" height="248" rx="10" transform="matrix(-1 0 0 1 343 299)" fill="#001242"/>
+<rect width="70" height="448" rx="10" transform="matrix(-1 0 0 1 241 99)" fill="#001242"/>
+<rect width="70" height="552" rx="10" transform="matrix(-1 0 0 1 119 0)" fill="#001242"/>
+<rect width="70" height="248" rx="10" transform="matrix(-1 0 0 1 320 299)" fill="#016FB9"/>
+<rect width="70" height="448" rx="10" transform="matrix(-1 0 0 1 218 99)" fill="#016FB9"/>
+<rect width="70" height="552" rx="10" transform="matrix(-1 0 0 1 96 0)" fill="#016FB9"/>
+</g>
+</svg>

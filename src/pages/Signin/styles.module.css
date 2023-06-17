@@ -1,0 +1,35 @@
+.mainContent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formSignup {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formSignup div:not(:first-child) {
+  margin-top: 10px;
+}
+
+.formSignup button {
+  margin-top: 40px;
+}
+
+.leftLogin {
+  position: relative;
+  top: 150px;
+  right: 100px;
+}
+
+.rightLogin {
+  position: relative;
+  bottom: 70px;
+  left: 100px;
+}

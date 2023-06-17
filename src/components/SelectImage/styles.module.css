@@ -1,0 +1,81 @@
+:root {
+  --azulclaro: #016fb9;
+  --azulsessenta: #016fb9a3;
+  --branco: #f6f8ff;
+  --background: #191919;
+  --radius: 10px;
+  --font4: 500 20px/1.5 montserrat;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+  align-self: center;
+}
+
+.preview .selectedImage {
+  z-index: 0;
+  --ph: 215px;
+  --pw: 155px;
+  height: var(--ph);
+  width: var(--pw);
+  position: relative;
+  border-radius: 10px;
+}
+
+.preview .preview_img {
+  z-index: 1;
+  background-color: var(--azulsessenta);
+  --ph: 215px;
+  --pw: 155px;
+  height: var(--ph);
+  width: var(--pw);
+  position: relative;
+  border-radius: 10px;
+}
+
+.preview input {
+  opacity: 0;
+  height: var(--ph);
+  width: var(--pw);
+  position: relative;
+}
+
+.preview .camera {
+  position: absolute;
+  top: 32%;
+  left: 26%;
+}
+
+.removeImageButton {
+  z-index: 1;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.4rem;
+}
+
+@media (min-width: 700px) {
+  .preview {
+    top: -0.7rem;
+    align-items: flex-end;
+  }
+
+  .preview label {
+    padding-right: 7.5rem;
+  }
+
+  .preview .selectedImage,
+  .preview .preview_img {
+    height: calc(var(--ph) + 90px);
+    width: calc(var(--pw) + 30px);
+    align-items: flex-end;
+  }
+
+  .preview .camera {
+    top: 37%;
+    left: 30%;
+  }
+}
