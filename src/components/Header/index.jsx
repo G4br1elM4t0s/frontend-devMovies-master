@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { LogoutBtn } from "../LogoutBtn";
 import { SearchHeader } from "../SearchHeader";
@@ -22,30 +22,33 @@ export function HeaderHome({ setIsSearchFocused, setValue, value }) {
       <div className={styles.headerContent}>
         <img src={logo} alt="Logo" />
         <nav>
-          <NavLink
-            exact
+          <Link
             to="/movies"
-            isActive={() => currentUrl === "/movies"}
-            activeStyle={{ color: "var(--blue-400)" }}
+            style={{
+              color: currentUrl === "/movies" ? "var(--blue-400)" : "#FFF",
+            }}
           >
             Home
-          </NavLink>
-          <NavLink
-            exact
+          </Link>
+          <Link
             to="/historic"
-            isActive={() => currentUrl === "/historic"}
-            activeStyle={{ color: "var(--blue-400)" }}
+            style={{
+              color: currentUrl === "/historic" ? "var(--blue-400)" : "#FFF",
+            }}
           >
             Historico
-          </NavLink>
-          <NavLink
-            exact
+          </Link>
+          <Link
             to={`/mymovies/${userId}`}
-            isActive={() => currentUrl === `/mymovies/${userId}`}
-            activeStyle={{ color: "var(--blue-400)" }}
+            style={{
+              color:
+                currentUrl === `/mymovies/${userId}`
+                  ? "var(--blue-400)"
+                  : "#FFF",
+            }}
           >
             Minha Coleção
-          </NavLink>
+          </Link>
         </nav>
         <div className={styles.utilsContent}>
           <SearchHeader
