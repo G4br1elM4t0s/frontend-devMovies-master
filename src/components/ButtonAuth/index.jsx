@@ -1,6 +1,5 @@
+import { Link, useLocation } from "react-router-dom";
 import styles from "./styles.module.css";
-
-import { useLocation } from "react-router-dom";
 
 export function ButtonAuth() {
   const location = useLocation();
@@ -16,8 +15,8 @@ export function ButtonAuth() {
   }
 
   return (
-    <a href={buttonLink}>
+    <Link to={buttonLink}>
       <button className={styles.buttonAuth}>{buttonText}</button>
-    </a>
+    </Link>
   );
 }

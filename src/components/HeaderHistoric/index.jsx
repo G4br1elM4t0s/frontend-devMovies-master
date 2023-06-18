@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import { LogoutBtn } from "../LogoutBtn";
 // import { SearchHeader } from "../SearchHeader";
@@ -8,52 +8,46 @@ import user from "../../assets/user.svg";
 import logo from "../../../public/logo.svg";
 
 export function HeaderHistoric() {
-  const [currentUrl, setCurrentUrl] = useState("");
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentUrl(window.location.href);
-    }
-  }, []);
+  const location = useLocation();
+  const currentUrl = location.pathname;
   const userId = localStorage.getItem("userId");
+
+  useEffect(() => {
+    // Lógica adicional se necessário
+  }, []);
 
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <img src={logo} alt="Logo" />
         <nav>
-          <a
-            href="/movies"
+          <Link
+            to="/movies"
             style={{
-              color:
-                currentUrl === "http://localhost:5173/movies"
-                  ? "var(--blue-400)"
-                  : "#FFF",
+              color: currentUrl === "/movies" ? "var(--blue-400)" : "#FFF",
             }}
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
+            to="/historic"
             style={{
-              color:
-                currentUrl === "http://localhost:5173/historic"
-                  ? "var(--blue-400)"
-                  : "#FFF",
+              color: currentUrl === "/historic" ? "var(--blue-400)" : "#FFF",
             }}
-            href="/historic"
           >
             Historico
-          </a>
-          <a
+          </Link>
+          <Link
+            to={`/mymovies/${userId}`}
             style={{
               color:
-                currentUrl === `http://localhost:5173/mymovies/${userId}`
+                currentUrl === `/mymovies/${userId}`
                   ? "var(--blue-400)"
                   : "#FFF",
             }}
-            href={`/mymovies/${userId}`}
           >
             Minha Coleção
-          </a>
+          </Link>
         </nav>
         <div className={styles.utilsContent}>
           {/* <SearchHeader/> */}
