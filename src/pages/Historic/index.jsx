@@ -8,6 +8,7 @@ import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
 import api from "../../services/axios";
 import { OthersCard } from "../../components/OuthersCard";
+import { HeaderHistoric } from "../../components/HeaderHistoric";
 
 export default function Historic() {
   const user = localStorage.getItem("userId");
@@ -45,7 +46,7 @@ export default function Historic() {
 
   return (
     <>
-      <HeaderHome />
+      <HeaderHistoric />
       <main className={styles.mainContent}>
         <BackgroundLogged />
         <section className={styles.boxContent}>

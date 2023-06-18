@@ -3,7 +3,8 @@ import Camera from "../../assets/camera.svg";
 import styles from "./styles.module.css";
 import excluirazul from "../../assets/excluirazul.svg";
 
-export default function SelectedImage() {
+// eslint-disable-next-line react/prop-types
+export default function SelectedImage({ register }) {
   const [selectedImage, setSelectedImage] = useState("");
   const inputFileRef = useRef(null);
 
@@ -59,6 +60,7 @@ export default function SelectedImage() {
           onChange={handleImageChange}
           ref={inputFileRef}
           accept="image/*"
+          {...register("imgcapa", { required: true })}
         />
       </div>
     </div>

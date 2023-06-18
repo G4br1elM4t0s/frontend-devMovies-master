@@ -4,7 +4,7 @@ import filme from "../../assets/filme.png";
 // eslint-disable-next-line react/prop-types
 export function Card({ onclick, filmeImage, title }) {
   const baseUrl = "http://localhost:3000/files/";
-
+  console.log(filmeImage);
   const regex = /[^/\\]+$/;
   // eslint-disable-next-line react/prop-types
   const fileName = filmeImage.match(regex)[0];
