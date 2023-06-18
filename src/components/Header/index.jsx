@@ -82,6 +82,17 @@ export function HeaderHome({
               >
                 Minha Coleção
               </Link>
+              <Link
+                to={`/`}
+                style={{
+                  color:
+                    currentUrl === `/mymovies/${userId}`
+                      ? "var(--blue-400)"
+                      : "#FFF",
+                }}
+              >
+                Sair
+              </Link>
             </nav>
             <div className={styles.utilsContent}>
               <SearchHeader

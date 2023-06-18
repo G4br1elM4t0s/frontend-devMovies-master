@@ -1,4 +1,3 @@
-import { Filter } from "../../components/Filter";
 import { HeaderHome } from "../../components/Header";
 import { Mensagem } from "../../components/Mensagem";
 import { useEffect, useState } from "react";
@@ -13,7 +12,6 @@ import { useNavigate } from "react-router-dom";
 export default function MyMovies() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [open, setOpen] = useState(true);
 
   const [movies, setMovies] = useState([]);
   const [selectedMovieId, setSelectedMovieId] = useState("");
@@ -78,11 +76,6 @@ export default function MyMovies() {
         value={value}
         setValue={setValue}
       />
-      <div className={styles.secondyBar}>
-        <div className={styles.contentBar}>
-          <Filter open={open} setOpen={setOpen} />
-        </div>
-      </div>
       {isSearchFocused ? (
         isSearchFocused && value === "" ? (
           <Mensagem
