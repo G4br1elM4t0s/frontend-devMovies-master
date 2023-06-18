@@ -10,7 +10,7 @@ export function CardHistoric({
   description,
   streamers,
 }) {
-  const baseUrl = "http://localhost:3000/files/";
+  const baseUrl = "https://devmoviesback.onrender.com/files/";
 
   const regex = /[^/\\]+$/;
   // eslint-disable-next-line react/prop-types

@@ -6,7 +6,7 @@ import filme from "../../assets/filme.png";
 export function OthersCard({ thumbnail, movieName, types }) {
   console.log(types);
 
-  const baseUrl = "http://localhost:3000/files/";
+  const baseUrl = "https://devmoviesback.onrender.com/files/";
 
   const regex = /[^/\\]+$/;
   // eslint-disable-next-line react/prop-types

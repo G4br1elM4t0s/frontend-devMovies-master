@@ -32,7 +32,7 @@ export function Modal({
     event.stopPropagation();
   };
 
-  const baseUrl = "http://localhost:3000/files/";
+  const baseUrl = "https://devmoviesback.onrender.com/files/";
 
   let fileName = "";
   if (movie.thumbnail) {

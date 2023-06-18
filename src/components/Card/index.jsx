@@ -3,7 +3,7 @@ import filme from "../../assets/filme.png";
 
 // eslint-disable-next-line react/prop-types
 export function Card({ onclick, filmeImage, title }) {
-  const baseUrl = "http://localhost:3000/files/";
+  const baseUrl = "https://devmoviesback.onrender.com/files/";
   console.log(filmeImage);
   const regex = /[^/\\]+$/;
   // eslint-disable-next-line react/prop-types
