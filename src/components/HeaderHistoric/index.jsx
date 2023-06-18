@@ -7,7 +7,8 @@ import styles from "./styles.module.css";
 import user from "../../assets/user.svg";
 import logo from "../../../public/logo.svg";
 
-export function HeaderHistoric() {
+// eslint-disable-next-line react/prop-types
+export function HeaderHistoric({ setIsLogout }) {
   const location = useLocation();
   const currentUrl = location.pathname;
   const userId = localStorage.getItem("userId");
@@ -52,7 +53,7 @@ export function HeaderHistoric() {
         <div className={styles.utilsContent}>
           {/* <SearchHeader/> */}
           <img src={user} alt="Usuario" />
-          <LogoutBtn />
+          <LogoutBtn setIsLogout={setIsLogout} />
         </div>
       </div>
     </header>

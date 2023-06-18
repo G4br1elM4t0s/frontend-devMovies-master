@@ -42,13 +42,24 @@ export function Modal({
   const encodedFileName = encodeURIComponent(fileName);
   const image = baseUrl + encodedFileName;
 
+  function limitCharacters(text, limit) {
+    if (text.length <= limit) {
+      return text;
+    }
+    return text.substring(0, limit) + "...";
+  }
+
   return (
     <div className={styles.backModal} onClick={fechar}>
       <div className={styles.modal} onClick={handleModalContentClick}>
         <img src={image} alt="movie" />
         <div className={styles.details} onClick={manter}>
           <h1>{movie.name}</h1>
-          <h2>{movie.description}</h2>
+          <h2>
+            {movie.description
+              ? limitCharacters(movie.description, 200)
+              : "loading"}
+          </h2>
           <span className={styles.castGenres}>
             <h3>Gênero</h3>:
             {Array.isArray(movie.genres) ? (

@@ -8,13 +8,16 @@ import { Modal } from "../../components/Modal";
 import api from "../../services/axios";
 import { Footer } from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { LogoutModal } from "../../components/LogoutModal";
 
 export default function Movies() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const [movies, setMovies] = useState([]);
   const [selectedMovieId, setSelectedMovieId] = useState("");
+  const [isLogout, setIsLogout] = useState(false);
 
   const [value, setValue] = useState("");
 
@@ -60,10 +63,14 @@ export default function Movies() {
 
   return (
     <>
+      {isLogout && <LogoutModal setIsLogout={setIsLogout} />}
       <HeaderHome
         setIsSearchFocused={setIsSearchFocused}
         value={value}
         setValue={setValue}
+        setIsLogout={setIsLogout}
+        setOpen={setOpen}
+        open={open}
       />
       {isSearchFocused ? (
         isSearchFocused && value === "" ? (

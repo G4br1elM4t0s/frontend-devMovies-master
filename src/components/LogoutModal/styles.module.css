@@ -1,0 +1,122 @@
+.backModal {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modalLogoutBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--white);
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 280px;
+  background: var(--blue-400);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 10px 8px 20px 5px rgba(0, 0, 0, 0.659);
+}
+
+.btnsClose {
+  display: flex;
+  gap: 10px;
+}
+
+.sim {
+  background: var(--white);
+  width: 150px;
+  border: 0;
+  padding: 10px 0 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nao {
+  background: var(--blue-900);
+  width: 150px;
+  border: 0;
+  padding: 10px 0 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+  .modalLogoutBox {
+    width: 80%;
+  }
+
+  .textClose {
+    font-size: 24px;
+  }
+
+  .sim {
+    width: 100px;
+  }
+
+  .nao {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .modalLogoutBox {
+    width: 80%;
+  }
+
+  .textClose {
+    font-size: 18px;
+  }
+
+  .sim {
+    width: 100px;
+  }
+
+  .nao {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .modalLogoutBox {
+    width: 80%;
+  }
+
+  .textClose {
+    font-size: 18px;
+  }
+
+  .sim {
+    width: 100px;
+  }
+
+  .nao {
+    width: 100px;
+  }
+}
+
+
+@media screen and (max-width:320px) {
+  .modalLogoutBox {
+    width: 80%;
+  }
+
+  .textClose {
+    font-size: 18px;
+  }
+
+  .sim {
+    width: 100px;
+  }
+
+  .nao {
+    width: 100px;
+  }
+}

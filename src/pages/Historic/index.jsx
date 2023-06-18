@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import api from "../../services/axios";
 import { OthersCard } from "../../components/OuthersCard";
 import { HeaderHistoric } from "../../components/HeaderHistoric";
+import { LogoutModal } from "../../components/LogoutModal";
 
 export default function Historic() {
   const user = localStorage.getItem("userId");
@@ -16,6 +17,7 @@ export default function Historic() {
   const [historic, setHistoric] = useState([]);
   const [recent, setRecent] = useState({});
   const [others, setOthers] = useState([]);
+  const [isLogout, setIsLogout] = useState(false);
 
   useEffect(() => {
     if (!user || user === "") {
@@ -46,7 +48,9 @@ export default function Historic() {
 
   return (
     <>
-      <HeaderHistoric />
+      {isLogout && <LogoutModal setIsLogout={setIsLogout} />}
+
+      <HeaderHistoric setIsLogout={setIsLogout} />
       <main className={styles.mainContent}>
         <BackgroundLogged />
         <section className={styles.boxContent}>

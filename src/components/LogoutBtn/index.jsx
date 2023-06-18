@@ -1,4 +1,12 @@
 import styles from "./styles.module.css";
-export function LogoutBtn() {
-  return <button className={styles.btnLogout}>Sair</button>;
+
+// eslint-disable-next-line react/prop-types
+export function LogoutBtn({ setIsLogout }) {
+  return (
+    <>
+      <button onClick={() => setIsLogout(true)} className={styles.btnLogout}>
+        Sair
+      </button>
+    </>
+  );
 }

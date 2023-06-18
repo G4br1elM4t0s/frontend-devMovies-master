@@ -11,6 +11,7 @@
   padding: 0 2rem;
   display: flex;
   align-items: center;
+
 }
 
 .headerContent img {
@@ -50,5 +51,17 @@
 @media (max-width: 426px) {
   .headerContent nav {
     display: none;
+  }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+
+  .headerContent {
+    width: 100vw;
+    justify-content: space-between;
   }
 }
