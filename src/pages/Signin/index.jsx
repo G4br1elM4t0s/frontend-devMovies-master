@@ -26,7 +26,7 @@ export default function Signin() {
   const onSubmit = async (data) => {
     const resolve = await api.post("/auth", data);
     console.log(resolve + " " + resolve.status);
-
+    console.log(resolve.data);
     if (resolve.status === 200) {
       localStorage.setItem("userId", resolve.data.id);
       navigate("/movies");
