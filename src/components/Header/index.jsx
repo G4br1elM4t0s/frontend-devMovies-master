@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 import { LogoutBtn } from "../LogoutBtn";
 import { SearchHeader } from "../SearchHeader";
@@ -8,52 +9,43 @@ import user from "../../assets/user.svg";
 import logo from "../../../public/logo.svg";
 
 export function HeaderHome({ setIsSearchFocused, setValue, value }) {
+  const location = useLocation();
   const [currentUrl, setCurrentUrl] = useState("");
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentUrl(window.location.href);
-    }
-  }, []);
   const userId = localStorage.getItem("userId");
+
+  useEffect(() => {
+    setCurrentUrl(location.pathname);
+  }, [location.pathname]);
 
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <img src={logo} alt="Logo" />
         <nav>
-          <a
-            href="/movies"
-            style={{
-              color:
-                currentUrl === "http://localhost:5173/movies"
-                  ? "var(--blue-400)"
-                  : "#FFF",
-            }}
+          <NavLink
+            exact
+            to="/movies"
+            isActive={() => currentUrl === "/movies"}
+            activeStyle={{ color: "var(--blue-400)" }}
           >
             Home
-          </a>
-          <a
-            style={{
-              color:
-                currentUrl === "http://localhost:5173/historic"
-                  ? "var(--blue-400)"
-                  : "#FFF",
-            }}
-            href="/historic"
+          </NavLink>
+          <NavLink
+            exact
+            to="/historic"
+            isActive={() => currentUrl === "/historic"}
+            activeStyle={{ color: "var(--blue-400)" }}
           >
             Historico
-          </a>
-          <a
-            style={{
-              color:
-                currentUrl === `http://localhost:5173/mymovies/${userId}`
-                  ? "var(--blue-400)"
-                  : "#FFF",
-            }}
-            href={`/mymovies/${userId}`}
+          </NavLink>
+          <NavLink
+            exact
+            to={`/mymovies/${userId}`}
+            isActive={() => currentUrl === `/mymovies/${userId}`}
+            activeStyle={{ color: "var(--blue-400)" }}
           >
             Minha Coleção
-          </a>
+          </NavLink>
         </nav>
         <div className={styles.utilsContent}>
           <SearchHeader
