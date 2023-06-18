@@ -10,19 +10,21 @@
   overflow-y: scroll;
   height: calc(100vh - 10rem);
 
-  &::-webkit-scrollbar {
-    width: 8px;
-    background-color: transparent;
-  }
 
-  &::-webkit-scrollbar-thumb {
-    background: var(--black-600);
-    border-radius: 4px;
-  }
+}
 
-  &::-webkit-scrollbar-thumb:hover {
-    background: var(--black-900);
-  }
+.historys::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+.historys::-webkit-scrollbar-thumb {
+  background: var(--black-600);
+  border-radius: 4px;
+}
+
+.historys::-webkit-scrollbar-thumb:hover {
+  background: var(--black-900);
 }
 
 .boxContent {
